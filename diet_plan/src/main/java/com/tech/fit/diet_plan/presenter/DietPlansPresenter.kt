@@ -18,6 +18,7 @@ class DietPlansPresenter (
         execute(dietPlansRepository.retrieveDietList()).subscribe({ item ->
             view.setDietList(item.result)
         }, { error ->
+            view.displayError()
         }).addTo(compositeDisposable)
     }
 
