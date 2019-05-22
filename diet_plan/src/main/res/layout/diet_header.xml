@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".activity.MainActivity">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearDietHeader">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@color/blackSemiTransparent">
+
+                <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <include layout="@layout/toolbar" android:id="@+id/include"
+                    />
+
+                    <TextView
+                            android:id="@+id/btnRecommendedDiet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dieta indicada"
+                            android:paddingBottom="6dp"
+                            android:paddingTop="6dp"
+                            android:paddingRight="11dp"
+                            android:paddingLeft="11dp"
+                            android:textSize="12sp"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:background="@drawable/bg_rounded_empty_btn"
+                            app:layout_constraintEnd_toEndOf="@+id/include" android:layout_marginStart="8dp"
+                            app:layout_constraintStart_toStartOf="@+id/include" android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="@+id/include"
+                            app:layout_constraintVertical_bias="1.0"/>
+                </android.support.constraint.ConstraintLayout>
+
+                <TextView
+                        android:id="@+id/txtRecommendedDietTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="34dp"
+                        android:layout_marginTop="5dp"
+                        android:textStyle="bold"
+                        android:text="Low Carb Iniciante"/>
+
+                <TextView
+                        android:visibility="visible"
+                        android:id="@+id/txtRecommendedDietDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:textAlignment="center"
+                        android:textSize="14sp"
+                        android:layout_marginTop="15dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="Emagreça de forma rápida e duradoura, focando em comida de verdade com até 110 gramas de carboidratos líquidos por dia!"/>
+
+                <TextView
+                        android:id="@+id/btnRecommendedDietSeeMore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dieta indicada"
+                        android:paddingBottom="13dp"
+                        android:paddingTop="13dp"
+                        android:paddingRight="47dp"
+                        android:paddingLeft="47dp"
+                        android:paddingEnd="47dp"
+                        android:paddingStart="47dp"
+                        android:textSize="14sp"
+                        android:layout_marginBottom="26dp"
+                        android:layout_marginTop="25dp"
+                        android:textAllCaps="true"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:background="@drawable/bg_rounded_filled_btn"/>
+
+            </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
