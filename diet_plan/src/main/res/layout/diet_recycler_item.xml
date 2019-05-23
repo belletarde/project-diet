@@ -3,16 +3,17 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="240dp"
-        android:layout_height="140dp"
+        android:layout_height="140dp" xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/linearDietItem"
         android:layout_margin="8dp"
-        tools:context=".activity.MainActivity">
+        app:cardCornerRadius="16dp"
+        tools:context=".activity.MainActivity" tools:targetApi="lollipop">
 
     <LinearLayout
             android:orientation="vertical"
             android:gravity="bottom"
             android:layout_width="match_parent"
-            android:background="@color/blackSemiTransparent"
+            android:background="@drawable/bg_rounded_filled_dark"
             android:layout_height="match_parent">
 
     <LinearLayout

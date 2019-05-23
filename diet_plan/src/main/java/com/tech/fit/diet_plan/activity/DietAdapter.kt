@@ -1,7 +1,9 @@
 package com.tech.fit.diet_plan.activity
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.drawable.Drawable
+import android.support.v4.content.ContextCompat.startActivity
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +11,7 @@ import android.view.ViewGroup
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.target.SimpleTarget
 import com.tech.fit.diet_plan.R
+import com.tech.fit.diet_plan.Utils.GlideHelper
 import com.tech.fit.diet_plan.model.DietPlanDetail
 import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.diet_recycler_item.*
@@ -43,17 +46,12 @@ class DietAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
             with(items) {
                 txtDietTitle.text = title
                 txtDietDescription.text = text
-                Glide.with(adapterContext)
-                    .load(imageUrl)
-                    .into(object : SimpleTarget<Drawable>() {
-                        override fun onResourceReady(
-                            resource: Drawable,
-                            transition: com.bumptech.glide.request.transition.Transition<in Drawable>?
-                        ) {
-                            linearDietItem.setBackgroundDrawable(resource)
-                        }
+                linearDietItem.setOnClickListener {
+                    val toDietDetail: Intent = DietPlanDetailActivity.newIntent(adapterContext, id)
+                    startActivity(adapterContext, toDietDetail, null)
+                }
 
-                    })
+                GlideHelper.setBackgroundImage(adapterContext, imageUrl, linearDietItem, cornerRadius = 18)
             }
         }
     }

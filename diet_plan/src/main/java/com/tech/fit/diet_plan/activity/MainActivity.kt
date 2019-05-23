@@ -11,6 +11,7 @@ import android.view.View.VISIBLE
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.target.SimpleTarget
 import com.tech.fit.diet_plan.R
+import com.tech.fit.diet_plan.Utils.GlideHelper
 import com.tech.fit.diet_plan.Utils.PostThreadExecutor
 import com.tech.fit.diet_plan.Utils.ThreadExecutor
 import com.tech.fit.diet_plan.model.DietHighLight
@@ -23,6 +24,7 @@ import com.tech.fit.diet_plan.view.DietPlansView
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.default_loading.view.*
 import kotlinx.android.synthetic.main.diet_header.view.*
 import kotlinx.android.synthetic.main.toolbar.*
 
@@ -49,17 +51,7 @@ class MainActivity : AppCompatActivity(), DietPlansView {
         dietHeader.txtRecommendedDietTitle.text = highLight.title
         dietHeader.btnRecommendedDietSeeMore.text = highLight.buttonName
         dietHeader.btnRecommendedDiet.text = highLight.label
-        Glide.with(this)
-            .load(highLight.imageUrl)
-            .into(object : SimpleTarget<Drawable>() {
-                override fun onResourceReady(
-                    resource: Drawable,
-                    transition: com.bumptech.glide.request.transition.Transition<in Drawable>?
-                ) {
-                    dietHeader.linearDietHeader.setBackgroundDrawable(resource)
-                }
-
-            })
+        GlideHelper.setBackgroundImage(this, highLight.imageUrl, dietHeader.linearDietHeader)
         dietHeader.btnRecommendedDietSeeMore.setOnClickListener {
             val toDietDetail = DietPlanDetailActivity.newIntent(this, highLight.id)
             startActivity(toDietDetail)
@@ -71,43 +63,15 @@ class MainActivity : AppCompatActivity(), DietPlansView {
         presenter.findAllDiets()
     }
 
-    override fun hideCustomLoading() {
-
-    }
-
-    override fun displayCustomLoading() {
-
-    }
-
     override fun displayLoading() {
-        layoutProgressDiet.visibility = VISIBLE
+        defaultLoadingDietList.visibility = VISIBLE
     }
 
     override fun dismissLoading() {
-        layoutProgressDiet.visibility = GONE
+        defaultLoadingDietList.visibility = GONE
     }
 
     override fun displayError(errorViewModel: ErrorViewModel?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
-    override fun displayToast(message: String?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
-    override fun displayDialog(message: String?, onPositiveClickListener: ((DialogInterface, Int) -> Unit)?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
-    override fun displayDialogAndNavigateBack(message: String?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
-    override fun displayCustomError(errorViewModel: ErrorViewModel?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
-    override fun showCustomError(errorViewModel: ErrorViewModel) {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 

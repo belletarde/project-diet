@@ -1,6 +1,7 @@
 package com.tech.fit.diet_plan.service
 
 import com.tech.fit.diet_plan.model.DietPlanDetail
+import com.tech.fit.diet_plan.model.DietPlanDetailApiResponse
 import com.tech.fit.diet_plan.model.DietPlanList
 import com.tech.fit.diet_plan.model.DietPlanListApiResponse
 import io.reactivex.Single
@@ -13,7 +14,7 @@ class DietPlanApi constructor() : BaseApi() {
         return service.retrieveDietList()
     }
 
-    fun retrieveDietDetail(id: Int): Single<DietPlanDetail> {
+    fun retrieveDietDetail(id: Long): Single<DietPlanDetailApiResponse> {
         return service.retrieveDietDetails(id)
     }
 }

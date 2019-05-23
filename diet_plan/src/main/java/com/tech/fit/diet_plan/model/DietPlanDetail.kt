@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName
 
 
 open class DietPlanDetail {
-    val id: Int = 0
+    val id: Long = 0
     val title: String = ""
     val text: String = ""
     @SerializedName("image_url")
@@ -13,6 +13,6 @@ open class DietPlanDetail {
     val buttonName: String = ""
     val type: String = "low_carb"
     val amount: Int = 55
-    val feature: MutableList<String>? = null
+    val features: List<String>? = null
 
 }

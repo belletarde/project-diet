@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearDietItem"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal">
+
+    <ImageView
+            android:background="@drawable/bg_orange_circle_test"
+            android:layout_width="wrap_content"
+            android:padding="4dp"
+            android:src="@drawable/ic_check_white"
+            android:layout_marginRight="12dp"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            android:id="@+id/txtAdvantageItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Recomendação de macronutrientes"/>
+
+</LinearLayout>
