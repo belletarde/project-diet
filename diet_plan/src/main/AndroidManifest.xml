@@ -17,12 +17,12 @@
 
     <application>
         <activity
-                android:name=".activity.DietPlanDetailActivity"
-                android:parentActivityName=".activity.MainActivity"
+                android:name="belletarde.tech.fit.diet_plan.activity.DietPlanDetailActivity"
+                android:parentActivityName="belletarde.tech.fit.diet_plan.activity.MainDietActivity"
                 android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
         <activity
-                android:name=".activity.MainActivity"
+                android:name="belletarde.tech.fit.diet_plan.activity.MainDietActivity"
                 android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
     </application>

@@ -7,7 +7,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_margin="8dp"
-        tools:context=".activity.MainActivity">
+        tools:context="belletarde.tech.fit.diet_plan.activity.MainDietActivity">
 
 
     <android.support.constraint.ConstraintLayout

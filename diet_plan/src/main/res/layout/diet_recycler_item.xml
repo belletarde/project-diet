@@ -7,7 +7,7 @@
         android:id="@+id/linearDietItem"
         android:layout_margin="8dp"
         app:cardCornerRadius="16dp"
-        tools:context=".activity.MainActivity" tools:targetApi="lollipop">
+        tools:context="belletarde.tech.fit.diet_plan.activity.MainDietActivity" tools:targetApi="lollipop">
 
     <LinearLayout
             android:orientation="vertical"

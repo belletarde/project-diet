@@ -5,7 +5,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".activity.DietPlanDetailActivity">
+        tools:context="belletarde.tech.fit.diet_plan.activity.DietPlanDetailActivity">
 
     <include
             android:visibility="gone"
